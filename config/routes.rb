@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :doses
-  resources :ingredients
   resources :cocktails
 
   root to: 'cocktails#index'

@@ -3,4 +3,6 @@ class Cocktail < ApplicationRecord
     has_many :ingredients, through: :doses
     has_many :reviews
     validates :name, presence: true, uniqueness: true
+
+    accepts_nested_attributes_for :doses
 end

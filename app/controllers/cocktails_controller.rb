@@ -1,28 +1,20 @@
 class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
-  # GET /cocktails
-  # GET /cocktails.json
   def index
     @cocktails = Cocktail.all
   end
 
-  # GET /cocktails/1
-  # GET /cocktails/1.json
   def show
   end
 
-  # GET /cocktails/new
   def new
     @cocktail = Cocktail.new
   end
 
-  # GET /cocktails/1/edit
   def edit
   end
 
-  # POST /cocktails
-  # POST /cocktails.json
   def create
     @cocktail = Cocktail.new(cocktail_params)
 
@@ -37,8 +29,6 @@ class CocktailsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /cocktails/1
-  # PATCH/PUT /cocktails/1.json
   def update
     respond_to do |format|
       if @cocktail.update(cocktail_params)
@@ -51,8 +41,6 @@ class CocktailsController < ApplicationController
     end
   end
 
-  # DELETE /cocktails/1
-  # DELETE /cocktails/1.json
   def destroy
     @cocktail.destroy
     respond_to do |format|

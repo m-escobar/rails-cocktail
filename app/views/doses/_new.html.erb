@@ -1,0 +1,8 @@
+<h3>Add a new dose</h3>
+<%= simple_form_for cocktail do |c| %>
+  <%= c.simple_fields_for :doses do |d| %>
+    <%= d.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+    <%= d.input :description %>
+  <% end %>
+  <%= c.button :submit, class: "btn btn-primary" %>
+<% end %>
